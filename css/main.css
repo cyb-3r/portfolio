@@ -148,6 +148,11 @@ p, span { color: var(--main-op-850); }
 	font-weight: 600;
 }
 
+.container {
+	margin: 0 auto;
+	max-width: var(--main-w-md);
+}
+
 /* components */
 #main-menu {
 	--spacing: 0.75rem;
