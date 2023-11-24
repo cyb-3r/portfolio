@@ -83,10 +83,10 @@ header nav {
 	gap: 1rem;
 	justify-content: end;
 	align-items: center;
-	font-size: 1.5rem;
 }
 
-nav > a {
+nav > a.icon {
+	font-size: 1.5rem;
 	color: var(--main-op-500);
 	transition: color 250ms;
 }
@@ -118,11 +118,19 @@ footer > span {
 	font-style: oblique;
 }
 
+nav hr {
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	background-color: var(--main-op-500);
+	margin: 0;
+	border: none;
+}
 a { color: var(--main-fg); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:not(.no-deco):hover { text-decoration: underline; }
 
 section {
-	margin: 1rem 0;
+	margin-bottom: 2rem;
 }
 
 h1,
@@ -178,12 +186,17 @@ p, span { color: var(--main-op-850); }
 	outline-offset: -1px;
 	border-radius: var(--rd-md);
 	overflow: hidden;
-	transition: box-shadow 250ms;
+	transition: box-shadow 250ms, outline-color 250ms;
 }
 
 #main-menu > .item:hover {
 	box-shadow: 0px 7px 5px -5px var(--main-op-250);
+	outline-color: var(--main-op-500);
 }
+
+#main-menu > .item:hover a {
+		color: hsl(260 70% 50%);
+	}
 
 #main-menu > .item > div {
 	padding: 0.25rem 1rem;
